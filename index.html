@@ -43,7 +43,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(3,0,10,0.97)
 .fest-date-badge{display:inline-block;margin-top:16px;background:linear-gradient(135deg,rgba(255,45,120,0.2),rgba(191,0,255,0.2));border:1px solid rgba(255,45,120,0.6);border-radius:4px;padding:10px 28px;font-family:'Orbitron',monospace;font-size:clamp(0.48rem,1.3vw,0.78rem);color:#fff;letter-spacing:0.2em;box-shadow:0 0 25px rgba(255,45,120,0.2);animation:badgePulse 3s ease infinite;}
 @keyframes badgePulse{0%,100%{box-shadow:0 0 15px rgba(255,45,120,0.2);}50%{box-shadow:0 0 35px rgba(255,45,120,0.5),0 0 70px rgba(191,0,255,0.2);}}
 .countdown-section{width:100%;max-width:700px;margin:28px auto 0;text-align:center;}
-.countdown-label{font-family:'Orbitron',monospace;font-size:clamp(0.52rem,1.3vw,0.78rem);color:black;text-shadow:0 0 10px var(--bl);letter-spacing:0.4em;margin-bottom:14px;animation:flicker 5s infinite;}
+.countdown-label{font-family:'Orbitron',monospace;font-size:clamp(0.52rem,1.3vw,0.78rem);color:var(--cy);text-shadow:0 0 10px var(--pk);letter-spacing:0.4em;margin-bottom:14px;animation:flicker 5s infinite;}
 .countdown-grid{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
 .cnt-block{background:rgba(5,1,15,0.92);border:1px solid var(--pk);border-radius:4px;padding:16px 20px;min-width:80px;box-shadow:0 0 20px rgba(255,45,120,0.2),inset 0 0 20px rgba(255,45,120,0.05);position:relative;overflow:hidden;}
 .cnt-block::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--pk),transparent);}
@@ -69,7 +69,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(3,0,10,0.97)
 .sh{font-family:'Orbitron',monospace;font-size:clamp(0.78rem,2.2vw,1.28rem);font-weight:900;color:var(--cy);text-shadow:0 0 15px var(--cy);letter-spacing:0.3em;text-align:center;margin:36px 0 22px;position:relative;}
 .sh::before,.sh::after{content:'//';color:var(--pk);margin:0 14px;text-shadow:0 0 8px var(--pk);}
 .chips{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;width:100%;max-width:900px;margin:26px auto 0;}
-.chip{background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.3);border-radius:3px;padding:9px 18px;font-family:'Orbitron',monospace;font-size:0.6rem;color:var(--cy);text-shadow:0 0 6px var(--cy);letter-spacing:0.12em;transition:background 0.3s;}
+.chip{background:rgba(0,245,255,0.08);border:1px solid rgba(30, 50, 51, 0.578);border-radius:3px;padding:9px 18px;font-family:'Orbitron',monospace;font-size:0.6rem;color:var(--cy);text-shadow:0 0 6px var(--cy);letter-spacing:0.12em;transition:background 0.3s;}
 .chip:hover{background:rgba(0,245,255,0.15);box-shadow:0 0 15px rgba(0,245,255,0.3);}
 .pc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;width:100%;max-width:980px;margin-bottom:16px;}
 .pc-card{background:rgba(5,1,15,0.93);border:1px solid rgba(0,245,255,0.2);border-radius:5px;padding:18px 20px;text-align:center;position:relative;overflow:hidden;transition:transform 0.3s;}
@@ -95,7 +95,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(3,0,10,0.97)
 .pass-card:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(255,230,0,0.15);}
 .pass-lbl{font-family:'Orbitron',monospace;font-size:0.55rem;letter-spacing:0.3em;color:var(--ye);margin-bottom:8px;}
 .pass-price{font-family:'Righteous',cursive;font-size:2.2rem;color:#fff;}
-.pass-desc{font-size:0.73rem;color:rgba(255,255,255,0.38);margin-top:5px;letter-spacing:0.07em;}
+.pass-desc{font-size:0.73rem;color:rgba(255, 255, 255, 0.808);margin-top:5px;letter-spacing:0.07em;}
 .ev-list{width:100%;max-width:980px;margin:6px auto;}
 .ev-item{border:1px solid rgba(255,45,120,0.15);border-left:3px solid var(--pk);margin-bottom:12px;padding:15px 20px;background:rgba(41, 42, 44, 0.852);border-radius:0 4px 4px 0;display:flex;justify-content:space-between;align-items:center;gap:10px;transition:background 0.3s,transform 0.25s;}
 .ev-item:hover{background:rgba(255,45,120,0.08);transform:translateX(4px);}
@@ -113,7 +113,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(3,0,10,0.97)
 .back-btn:hover{background:var(--cy);color:var(--dk);}
 .dp-icon{font-size:4.5rem;display:block;margin-bottom:16px;filter:drop-shadow(0 0 18px currentColor);animation:floatAnim 3s ease infinite;}
 @keyframes floatAnim{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
-.dp-name{font-family:'Righteous',cursive;font-size:clamp(2.2rem,8vw,5rem);background:linear-gradient(135deg,var(--cy),var(--pk));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 15px rgba(0,245,255,0.4));margin-bottom:6px;}
+.dp-name{font-family:'Righteous',cursive;font-size:clamp(2.2rem,8vw,5rem);background:linear-gradient(135deg,var(--dk),var(--pk));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 15px rgba(0,245,255,0.4));margin-bottom:6px;}
 .dp-full{font-family:'Orbitron',monospace;font-size:clamp(0.56rem,1.4vw,0.83rem);color:rgba(255,255,255,0.4);letter-spacing:0.25em;}
 .ic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;width:100%;max-width:980px;margin-top:20px;}
 .ic{background:rgba(5,1,15,0.93);border:1px solid rgba(0,245,255,0.2);border-radius:5px;padding:22px 24px;backdrop-filter:blur(10px);position:relative;overflow:hidden;transition:transform 0.3s;}
@@ -292,13 +292,13 @@ footer{color: aliceblue;}
 <div class="sh">DEPARTMENTS — CLICK TO EXPLORE</div>
 <div class="dgrid">
   <div class="dc" onclick="showDept('aids')"><div class="dc-inner"><span class="di" style="color:#ff2d78">🤖</span><div class="dab">AI&amp;DS</div><div class="dn">Artificial Intelligence &amp; Data Science</div><div class="dec">4 EVENTS</div><div class="darr">→</div></div></div>
-  <div class="dc" onclick="showDept('civil')"><div class="dc-inner"><span class="di" style="color:#ff9500">🏗️</span><div class="dab">CIVIL</div><div class="dn">Civil Engineering</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
+  <div class="dc" onclick="showDept('civil')"><div class="dc-inner"><span class="di" style="color:#ff9500">🏗️</span><div class="dab">CIVIL</div><div class="dn">Civil<br> Engineering</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
   <div class="dc" onclick="showDept('cse')"><div class="dc-inner"><span class="di" style="color:#00f5ff">💻</span><div class="dab">CSE</div><div class="dn">Computer Science Engineering</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
-  <div class="dc" onclick="showDept('ece')"><div class="dc-inner"><span class="di" style="color:#ffe600">⚡</span><div class="dab">ECE</div><div class="dn">Electronics &amp; Communication</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
-  <div class="dc" onclick="showDept('eee')"><div class="dc-inner"><span class="di" style="color:#bf00ff">🔋</span><div class="dab">EEE</div><div class="dn">Electrical &amp; Electronics Engg.</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
-  <div class="dc" onclick="showDept('it')"><div class="dc-inner"><span class="di" style="color:#00ff88">🌐</span><div class="dab">IT</div><div class="dn">Information Technology</div><div class="dec">4 EVENTS</div><div class="darr">→</div></div></div>
-  <div class="dc" onclick="showDept('mech')"><div class="dc-inner"><span class="di" style="color:#00f5ff">⚙️</span><div class="dab">MECH</div><div class="dn">Mechanical Engineering</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
-  <div class="dc" onclick="showDept('sh')"><div class="dc-inner"><span class="di" style="color:#ff2d78">🎭</span><div class="dab">S&amp;H</div><div class="dn">Science &amp; Humanities</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
+  <div class="dc" onclick="showDept('ece')"><div class="dc-inner"><span class="di" style="color:#ffe600">⚡</span><div class="dab">ECE</div><div class="dn">Electronics&<br>Communication Engg</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
+  <div class="dc" onclick="showDept('eee')"><div class="dc-inner"><span class="di" style="color:#bf00ff">🔋</span><div class="dab">EEE</div><div class="dn">Electrical &amp;<br> Electronics Engg</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
+  <div class="dc" onclick="showDept('it')"><div class="dc-inner"><span class="di" style="color:#00ff88">🌐</span><div class="dab">IT</div><div class="dn">Information<br> Technology</div><div class="dec">4 EVENTS</div><div class="darr">→</div></div></div>
+  <div class="dc" onclick="showDept('mech')"><div class="dc-inner"><span class="di" style="color:#00f5ff">⚙️</span><div class="dab">MECH</div><div class="dn">Mechanical<br> Engineering</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
+  <div class="dc" onclick="showDept('sh')"><div class="dc-inner"><span class="di" style="color:#ff2d78">🎭</span><div class="dab">S&amp;H</div><div class="dn">Science & <br> Humanities</div><div class="dec">3 EVENTS</div><div class="darr">→</div></div></div>
 </div>
 
 <div class="ndiv"></div>
