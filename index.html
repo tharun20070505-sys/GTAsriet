@@ -603,7 +603,7 @@ const BOT={
   'events':'🎭 SRISTI 2K26 has 30+ events across 8 departments! Technical events, paper presentations, project expos, and cultural events on March 14. Which department?',
   'register':'📝 Silver Pass ₹250 (1 day) or Golden Pass ₹450 (2 days). Both include refreshments, lunch, certificate & kit!',
   'date':'📅 SRISTI 2K26 is on March 13-14, 2026! Day 1: Technical. Day 2: Cultural Fest with Chief Guest Ms. Sindhu (Nakkalites).',
-  'chief guest':'🌟 Ms. Sindhu from Nakkalites is our special Chief Guest for the Cultural Fest on March 14!',
+  'chiefguest':'🌟 Ms. Sindhu from Nakkalites is our special Chief Guest for the Cultural Fest on March 14!',
   'cse':'💻 CSE: Capture the Flag, Code Debugging, Dumb Charades. Coordinator: Mr. C. Mahesh – 8508126946',
   'ece':'⚡ ECE: I Minute Engineer, 3D Show, Start Music. Coordinator: Mr. A. Periyanan – 7502619676',
   'eee':'🔋 EEE: Bomb Squad, Mindscape Rumble, IPL Auction. Coordinator: Mr. D. Palanivel – 9790333263',
@@ -622,7 +622,7 @@ const BOT={
 };
 function getReply(m){
   for(const[k,v] of Object.entries(BOT)){if(m.includes(k))return v;}
-  return '🤖 I can help with: events, register, departments (CSE/ECE/EEE/IT/MECH/CIVIL/AIDS/S&H), cheif guest , cultural, passes, location, chief guest, paper , location , hello, contact . Try asking!';
+  return '🤖 I can help with: events, register, departments (CSE/ECE/EEE/IT/MECH/CIVIL/AIDS/S&H), cheifguest , cultural, passes, location, paper , location , hello, contact . Try asking!';
 }
 function addMsg(t,tp){
   const msgs=document.getElementById('chatMessages');
