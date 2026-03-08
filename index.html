@@ -128,12 +128,12 @@ nav{position:fixed;top:0;left:0;right:0;z-index:500;background:rgba(3,0,10,0.97)
 .cev{width:100%;max-width:980px;background:rgba(0,245,255,0.04);border:1px solid rgba(0,245,255,0.18);border-radius:4px;padding:18px 22px;margin:4px auto 0;}
 .cev-title{font-family:'Orbitron',monospace;font-size:0.62rem;letter-spacing:0.28em;color:var(--cy);text-shadow:0 0 6px var(--cy);margin-bottom:12px;}
 .cev-tags{display:flex;gap:10px;flex-wrap:wrap;}
-.cev-tag{background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.22);border-radius:3px;padding:5px 13px;font-size:0.82rem;color:rgba(255,255,255,0.65);}
+.cev-tag{background:rgba(7, 118, 122, 0.77);border:1px solid rgba(32, 217, 224, 0.825);border-radius:3px;padding:5px 13px;font-size:0.82rem;color:rgb(239, 237, 237);}
 .chat-fab{position:fixed;bottom:24px;right:24px;z-index:1000;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--pk),var(--pu));border:2px solid var(--cy);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.5rem;box-shadow:0 0 25px rgba(255,45,120,0.6);animation:fabPulse 2s ease infinite alternate;transition:transform 0.3s;}
 .chat-fab:hover{transform:scale(1.1);}
 @keyframes fabPulse{from{box-shadow:0 0 20px rgba(255,45,120,0.5);}to{box-shadow:0 0 40px rgba(255,45,120,0.9),0 0 60px rgba(191,0,255,0.5);}}
 .chatbox{position:fixed;bottom:95px;right:24px;z-index:1000;width:min(360px,calc(100vw - 32px));background:rgba(5,1,15,0.97);border:1px solid var(--pk);border-radius:8px;box-shadow:0 0 40px rgba(255,45,120,0.3);display:none;flex-direction:column;overflow:hidden;backdrop-filter:blur(20px);}
-.chatbox.open{display:flex;animation:chatIn 0.3s cubic-bezier(0.34,1.56,0.64,1);}
+.chatbox.open{display:flgitex;animation:chatIn 0.3s cubic-bezier(0.34,1.56,0.64,1);}
 @keyframes chatIn{from{opacity:0;transform:scale(0.8) translateY(20px);}to{opacity:1;transform:scale(1) translateY(0);}}
 .chat-header{background:linear-gradient(135deg,rgba(255,45,120,0.3),rgba(191,0,255,0.3));padding:14px 18px;border-bottom:1px solid rgba(255,45,120,0.3);display:flex;align-items:center;gap:10px;}
 .chat-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--pk),var(--pu));display:flex;align-items:center;justify-content:center;font-size:1rem;box-shadow:0 0 12px rgba(255,45,120,0.5);}
@@ -422,42 +422,42 @@ const IMGS = {
 
 const DEPTS = {
   aids:{name:'AI&DS',full:'Artificial Intelligence & Data Science',icon:'🤖',ic:'#ff2d78',bg:'gta1',
-    Faculty:[{name:'Dr. J. Nithya',role:'Staff Coordinator – AIDS',phone:'9538932255',email:'aids@sriet.ac.in'}],
-    students:[{name:'Mr. A . Melvin Rajkumar',role:'Student Coordinator · III/AIDS',phone:'7904986784'}],
-    events:[{name:'Blindrix',type:'TECHNICAL'},{name:'Techwhiz',type:'TECHNICAL'},{name:'Typing Thunder',type:'NON-TECHNICAL'},{name:'Creativity Fest',type:'NON-TECHNICAL'}]
+    Faculty:[{name:'Dr. J. Nithya',role:'Staff Coordinator – AIDS',phone:'9538932255'}],
+    students:[{name:'Ms . v. Shanthi Aiswarya ',role:'Student Coordinator · III/AIDS',phone:'9360780940'}],
+    events:[{name:'Cyber Squid',type:'TECHNICAL'},{name:'Tackle The Idea',type:'TECHNICAL'},{name:'Memezoo',type:'NON-TECHNICAL'},{name:'IPL Auction',type:'NON-TECHNICAL'},{name:'Spot The Lie',type:'NON-TECHNICAL'}]
   },
   civil:{name:'CIVIL',full:'Civil Engineering',icon:'🏗️',ic:'#ff9500',bg:'gta2',
-    Faculty:[{name:'Mrs. M. P. Meera',role:'Asst. Professor – CIVIL',phone:'7812822030',email:'civil@sriet.ac.in'}],
+    Faculty:[{name:'Mrs. M. P. Meera',role:'Asst. Professor – CIVIL',phone:'7812822030'}],
     students:[{name:'Mr. RK. Hemanth',role:'Student Coordinator · III/CIVIL',phone:'8179087003'}],
     events:[{name:'Model the Wonder',type:'TECHNICAL'},{name:'CADD Modelling',type:'TECHNICAL'},{name:'Code Cracking',type:'TECHNICAL'}]
   },
   cse:{name:'CSE',full:'Computer Science & Engineering',icon:'💻',ic:'#00f5ff',bg:'bg1',
-    Faculty:[{name:'Mr. C. Mahesh',role:'Staff Coordinator – CSE',phone:'8508126946',email:'cse@sriet.ac.in'}],
+    Faculty:[{name:'Mr. C. Mahesh',role:'Staff Coordinator – CSE',phone:'8508126946'}],
     students:[{name:'Mr. D. Rohan',role:'Student Coordinator · III/CSE',phone:'7397668478'}],
     events:[{name:'Capture the Flag',type:'TECHNICAL'},{name:'Code Debugging',type:'TECHNICAL'},{name:'Dumb Charades',type:'NON-TECHNICAL'}]
   },
   ece:{name:'ECE',full:'Electronics & Communication Engineering',icon:'⚡',ic:'#ffe600',bg:'bg2',
-    Faculty:[{name:'Mr. A. Periyanan',role:'Staff Coordinator – ECE',phone:'7502619676',email:'ece@sriet.ac.in'},{name:'Dr. S. Sudha',role:'HOD / ECE',phone:'9944411041',email:'ece@sriet.ac.in'}],
+    Faculty:[{name:'Mr. A. Periyanan',role:'Staff Coordinator – ECE',phone:'7502619676'}],
     students:[{name:'Mr. G. Kalidasan',role:'Student Coordinator · III/ECE',phone:'9345546603'}],
     events:[{name:'I Minute Engineer',type:'TECHNICAL'},{name:'3D Show',type:'TECHNICAL'},{name:'Start Music',type:'NON-TECHNICAL'}]
   },
   eee:{name:'EEE',full:'Electrical & Electronics Engineering',icon:'🔋',ic:'#bf00ff',bg:'bg3',
-    Faculty:[{name:'Mr. D. Palanivel',role:'Staff Coordinator – EEE',phone:'9790333263',email:'eee@sriet.ac.in'},{name:'Dr. R. Leena Rose',role:'HOD / EEE',phone:'9976929386',email:'eee@sriet.ac.in'}],
+    Faculty:[{name:'Mr. D. Palanivel',role:'Staff Coordinator – EEE',phone:'9790333263',}],
     students:[{name:'Mr. J. Nevin',role:'Student Coordinator · III/EEE',phone:'9342384875'}],
     events:[{name:'Bomb Squad',type:'TECHNICAL'},{name:'Mindscape Rumble',type:'TECHNICAL'},{name:'IPL Auction',type:'NON-TECHNICAL'}]
   },
   it:{name:'IT',full:'Information Technology',icon:'🌐',ic:'#00ff88',bg:'eco1',
-    Faculty:[{name:'Mrs. M. Divya',role:'Staff Coordinator – IT',phone:'8296452337',email:'it@sriet.ac.in'}],
+    Faculty:[{name:'Mrs. M. Divya',role:'Staff Coordinator – IT',phone:'8296452337'}],
     students:[{name:'Mr. A. Madhan',role:'Student Coordinator · III/IT',phone:'9342061813'}],
     events:[{name:'Blindrix',type:'TECHNICAL'},{name:'Techwhiz',type:'TECHNICAL'},{name:'Typing Thunder',type:'NON-TECHNICAL'},{name:'Creativity Fest',type:'NON-TECHNICAL'}]
   },
   mech:{name:'MECH',full:'Mechanical Engineering',icon:'⚙️',ic:'#00f5ff',bg:'eco2',
-    Faculty:[{name:'Mr. S. M. Deivasikamani',role:'Staff Coordinator – MECH',phone:'9047406801',email:'mech@sriet.ac.in'}],
+    Faculty:[{name:'Mr. S. M. Deivasikamani',role:'Staff Coordinator – MECH',phone:'9047406801'}],
     students:[{name:'Mr. Manivel',role:'Student Coordinator · III/MECH',phone:'9524882761'}],
     events:[{name:'Mechanical Quiz',type:'TECHNICAL'},{name:'Tool Finder',type:'TECHNICAL'},{name:'CADD Modelling',type:'TECHNICAL'}]
   },
   sh:{name:'S&H',full:'Science & Humanities',icon:'🎭',ic:'#ff2d78',bg:'gta1',
-    Faculty:[{name:'Dr. R. Gopalkrishnan',role:'Staff Coordinator – S&H',phone:'6379585956',email:'sh@sriet.ac.in'},{name:'Dr. S. Eswaran',role:'HOD / S&H',phone:'8667246537',email:'sh@sriet.ac.in'}],
+    Faculty:[{name:'Dr. R. Gopalkrishnan',role:'Staff Coordinator – S&H',phone:'6379585956'}],
     students:[{name:'Mr. Robinson',role:'Student Coordinator · I/ECE',phone:'8428350302'}],
     events:[{name:'Photography',type:'CREATIVE'},{name:'Treasure Hunt',type:'NON-TECHNICAL'},{name:'E-Games',type:'NON-TECHNICAL'}]
   }
