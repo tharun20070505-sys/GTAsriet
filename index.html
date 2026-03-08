@@ -372,20 +372,10 @@ footer{color: aliceblue;}
   <footer>© 2026 SRISTI 2K26 · SRI RANGANATHAR INSTITUTE OF ENGINEERING AND TECHNOLOGY · events@sriet.ac.in</footer>
 </div>
 
-<div class="music-player">
-  <div class="music-icon" id="musicIcon">🎵</div>
-  <div class="music-info">
-    <div class="music-title" id="musicTitle">Vice City Beats</div>
-    <div class="music-artist">GTA Vice City OST</div>
-  </div>
-  <div class="music-wave" id="musicWave" style="display:none">
-    <div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div><div class="wave-bar"></div>
-  </div>
-  <div class="music-controls">
-    <button class="music-btn" onclick="toggleMusic()" id="playBtn">⏸</button>
-    <button class="music-btn" onclick="nextTrack()">⏭</button>
-  </div>
-</div>
+<audio id="bg-audio" loop autoplay>
+  <source src="C:\Users\tharu\Grand Theft Auto_ San Andreas (Official Theme Song)(MP3_160K).mp3" type="audio/mpeg">
+</audio>
+
 
 <div class="chat-fab" onclick="toggleChat()">🤖</div>
 <div class="chatbox" id="chatbox">
@@ -579,23 +569,22 @@ function showDept(k){
 }
 
 // MUSIC
-const tracks=[
-  {title:'Vice City – Flash FM',url:'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'},
-  {title:'Vice City – V-Rock',url:'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3'},
-  {title:'Vice City – Emotion 98.3',url:'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3'},
-];
-let ct=0,audio=null,playing=true;
-function toggleMusic(){
-  if(!audio){audio=new Audio(tracks[ct].url);audio.volume=0.50;audio.addEventListener('ended',nextTrack);}
-  if(playing){audio.pause();playing=false;document.getElementById('playBtn').textContent='▶';document.getElementById('musicWave').style.display='none';}
-  else{audio.play().catch(()=>{});playing=true;document.getElementById('playBtn').textContent='⏸';document.getElementById('musicWave').style.display='flex';}
-}
-function nextTrack(){
-  ct=(ct+1)%tracks.length;
-  document.getElementById('musicTitle').textContent=tracks[ct].title;
-  if(audio){audio.pause();audio=null;}
-  if(playing){playing=false;toggleMusic();}
-}
+window.addEventListener("load", () => {
+  // Try auto-play audio
+  const audio = document.getElementById("bg-audio");
+  audio.volume = 0.15;
+  const tryPlay = () => {
+    audio.play().catch(() => {});
+  };
+  setTimeout(tryPlay, 500);
+  document.body.addEventListener("click", tryPlay, { once: true });
+  document.body.addEventListener("touchstart", tryPlay, { once: true });
+  
+  // Hide loader
+  setTimeout(() => {
+    document.getElementById("ghost-loader").classList.add("hide");
+  }, 3200);
+});
 
 // CHAT
 function toggleChat(){document.getElementById('chatbox').classList.toggle('open');}
